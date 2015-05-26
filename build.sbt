@@ -15,6 +15,7 @@ lazy val cats = Seq(
   "org.spire-math" %% "cats-core"    % catsVersion,
   "org.spire-math" %% "cats-std"     % catsVersion,
   "org.spire-math" %% "cats-state"   % catsVersion,
+  "org.spire-math" %% "cats-free"    % catsVersion,
   "org.spire-math" %% "cats-laws"    % catsVersion % Test
 )
 
@@ -24,7 +25,6 @@ lazy val algebra = Seq(
   "org.spire-math" %% "algebra-laws" % "0.2.0-SNAPSHOT" % Test from "http://plastic-idolatry.com/jars/algebra-laws_2.11-0.2.0-SNAPSHOT.jar"
 )
 
-/*
 scalacOptions ++= Seq(
     "-deprecation",
     "-encoding", "UTF-8",
@@ -41,4 +41,3 @@ scalacOptions ++= Seq(
     "-Ywarn-value-discard",
     "-Xfuture"
   )
-  */

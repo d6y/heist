@@ -5,10 +5,29 @@
 
 # Example
 
+``` scala
+val credentials = ???
+
+import spreadsheet._
+
+val prog = for {
+  sheet <- openSheet("UK Jan Rainfall")
+  work  <- openWorksheet(sheet, 0)
+  rows  <- rows(work)
+  xs    <- cells(rows)
+} yield xs
+
+val interp = new interpreter.GoogleClientInterpreter(credentials)
+
+val result = interp.run(prog)
+println(result.toList)
+// List(1766, 4.4, 1767, 92.7, 1768, 109.2, ...)
+```
 
 # Status
 
-Do not use this. I don't even use it yet.
+Not even alpha. Do not use this. I don't even use it yet. The rows/cells language is terrible and will change. In fact, I'm more likely to look at Calendar and Contacts first.  Keep away. :skull:
+
 
 # Getting Started
 
@@ -17,6 +36,7 @@ You need to:
 - Build Cats (check it out, and `sbt publish-local`)
 - Register an application is the Google Console (see _API Secrets_ below)
 - Run the _main.scala_
+- Re-write everything.
 
 ## API Secrets
 
