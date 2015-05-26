@@ -1,2 +1,3 @@
-private/*.json
-private/token
+private/client_secret.json
+private/access
+private/refresh
